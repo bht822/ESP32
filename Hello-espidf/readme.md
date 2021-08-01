@@ -20,3 +20,26 @@ idf.py -p [your com port] flash monitor
 ## vs code intellisense
 
 intellisense should just work so long as you have set up the paths correctly. If you have trouble double check your idf and tools paths and correct them in the **/.vscode/c_cpp_properties.json** file
+
+## vs code custom action button
+
+Install VScode Action BUttons
+Edit settings.json
+ADD
+```
+"actionButtons": {
+  "commands": [
+    {
+      "name":"Build",
+      "color":"White",
+      "command": "idf.py build"
+    },
+    {
+      "name": "Run",
+      "color": "White",
+      "command": "idf.py build flash monitor -p COM6"
+    }
+  ]
+  }
+
+```
